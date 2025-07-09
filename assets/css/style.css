@@ -1,0 +1,1415 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.side-space{
+    padding-left: 100px;
+    padding-right: 80px;
+}
+.topnav{
+  font-size: 10px;
+  gap: 20px;
+  color: #7E7E7E;
+  padding-top: 5px;
+}
+
+.topnav a {
+  position: relative;
+  padding: 0 10px;
+  text-decoration: none;
+ color: #7E7E7E;
+}
+
+.topnav a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px;
+  width: 1px;
+  background-color: #ccc; /* change color as needed */
+}
+.dropdown1:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px;
+  width: 1px;
+  background-color: #ccc; /* change color as needed */
+}
+.Home-1 .dropdown-divider-vertical {
+  height: 16px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 8px;
+}
+.dropdown-toggle::after{
+  display: none !important; /* Removes Bootstrap's default arrow */
+}
+.right-top-nav span{
+  color:#3BB77E;
+}
+/* Deals icon styling */
+.navbar .nav-link img {
+  height: 16px;
+  margin-right: 4px;
+  margin-top: -2px;
+}
+
+/* =======================
+   Middle Navbar Styling
+========================== */
+
+/* Wrapper styles */
+.middle-navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Search bar wrapper */
+.search-bar-wrapper {
+  border: 2px solid #BCE3C9;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  min-width: 450px;
+  background-color: #fff;
+  flex: 1;
+}
+
+/* Category dropdown inside search */
+.search-bar-wrapper .btn {
+  white-space: nowrap;
+}
+
+.all-categories-dropdown .btn {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  padding: 0 12px;
+}
+
+/* Divider inside search bar */
+.search-divider {
+  width: 1px;
+  background-color: #198754;
+  height: 60%;
+  align-self: center;
+}
+
+/* Search input */
+.search-input {
+  border: none !important;
+  border-left: none;
+  box-shadow: none;
+  padding: 0.375rem 0.75rem;
+  flex-grow: 1;
+  min-width: 160px;
+}
+
+/* Search button */
+.search-button {
+  color: gray;
+  border: none;
+  border-radius: 0;
+  padding: 0 16px;
+  background-color: transparent;
+}
+
+/* Location dropdown button */
+.location-dropdown .btn {
+  border: 1px solid #ECECEC;
+  background-color: white;
+  height: 45px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.location-dropdown span {
+  color: #3BB77E;
+  font-weight: 400;
+}
+
+/* Icons section */
+.icons a {
+  color: black;
+  text-decoration: none;
+}
+
+.icons small {
+  display: block;
+  font-size: 12px;
+}
+
+.navbar-expand-lg .navbar-nav {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+
+
+/* ---------- SIDEBAR STYLES ---------- */
+.sidebar {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Carousel pagination (dots) */
+.carousel-indicators.bottom-indicators {
+  bottom: 15px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+.text-bg-light{
+  background-color: #BCE3C9 !important;
+  font-weight: 400;
+}
+.sidebar .category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.list-unstyled a{
+  color:#2c3e50;
+  text-decoration: none;
+}
+.sidebar .category-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar .badge {
+  margin-left: auto;
+  font-size: 12px;
+  background-color: #95c199;
+  color: #2e7d32;
+}
+
+/* ---------- CAROUSEL / BANNER ---------- */
+.hero-banner {
+  background-color: #fff7ec;
+  border-radius: 20px;
+  padding: 40px 65px;
+  text-align: center;
+  position: relative; 
+  overflow: hidden;
+  height: 360px;
+ 
+}
+.hero-slide{
+  background-image: url('/assets/img/Section.png');
+background-position: cover;
+background-size: cover;
+
+}
+.hero-banner h2 {
+  font-family: "Quicksand" ;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: start;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.hero-banner p {
+  font-size: 16px;
+  text-align: start;
+  color: #777;
+}
+
+.newsletter-form {
+  gap: 10px;
+}
+.nav-pills{
+    color: black;
+}
+.newsletter-form input[type="email"] {
+  padding: 10px 15px 10px 45px; /* Space for icon */
+  border: 2px solid #28a745;
+  border-radius: 999px  999px;
+  outline: none;
+  width: 300px;
+  max-width: 100%;
+}
+
+.newsletter-form .subscribe-btn {
+  padding: 10px 25px;
+  border-radius:  999px 999px ;
+  background-color: #00ad4d;
+  color: #fff;
+  border: 2px solid #28a745;
+  font-weight: 600;
+}
+
+.newsletter-form .form-control:focus {
+  box-shadow: none;
+  border-color: #28a745;
+}
+
+.newsletter-form .bi-share-fill {
+  font-size: 1rem;
+}
+/* ---------- POPULAR PRODUCTS SECTION ---------- */
+.popular-products-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 30px 0 20px;
+}
+/* Default: side by side */
+.product-nav-section {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Wrap pills */
+.product-nav-pills {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.shoppingbtn{
+    font-size: 10px;
+}
+.timersiz{
+font-size: 10px;
+top: 30%;
+padding: 2px 10px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  border: 1px solid #eee;
+  transition: all 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.product-card img {
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-card small {
+  color: #777;
+}
+.card{
+  border: 2px solid #ECECEC !important; 
+  border-radius: 20px;
+}
+.card-body h6{
+  font-family: "Quicksand";
+  font-size: 14px;
+  font-weight: 700;
+}
+.card-body small{
+  font-size: 10px;
+}
+.card-body strong{
+  font-size: 10px;
+}
+.card-body .btn-sm{
+  background-color: #DEF9EC;
+}
+.product-card .price {
+  font-weight: 600;
+  color: #00ad4d;
+  margin-right: 10px;
+}
+
+.product-card .old-price {
+  color: #aaa;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.product-card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+
+.btn-add {
+  background-color: #00ad4d;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* ---------- PRICE RANGE STYLES ---------- */
+.price-slider {
+  margin-top: 20px;
+}
+
+.price-slider input[type=range] {
+  width: 100%;
+}
+
+.filter-btn {
+  background-color: #00ad4d;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+
+/* ============================
+   Shop by Categories Section
+=============================== */
+.category-showcase-section {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.section-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.section-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.view-all-link {
+  color:gray;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.section-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.arrow-btn {
+  background-color: #eee;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.arrow-btn:hover {
+  background-color: #ddd;
+}
+
+.category-items-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding-bottom: 10px;
+}
+
+.category-items-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.category-card-item {
+  min-width: 140px;
+  background-color:#F4F6FA;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.category-icon-container img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.category-item-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =============================
+   Product Grid: 4 Column Layout
+============================== */
+.four-column-product-showcase {
+  width: 100%;
+}
+
+.four-column-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Common styles for all product columns */
+.product-column {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Reuse heading bar */
+.product-column .section-title-bar {
+  margin-bottom: 1rem;
+}
+
+.showcase-product-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Generic Product Card */
+.showcase-product-card {
+  display: flex;
+  flex-direction: row; /* <-- make image on left by default */
+  align-items: center;
+ 
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  transition: box-shadow 0.3s;
+  margin-bottom: 15px;
+}
+
+/* Image Section */
+.showcase-product-image-area {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.showcase-product-image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Details Section */
+.showcase-product-details {
+  padding: 10px;
+  flex: 1;
+}
+
+.showcase-product-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.showcase-product-rating-info {
+  color: gold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.showcase-product-price-display {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.showcase-original-price-value {
+  text-decoration: line-through;
+  margin-left: 8px;
+  font-size: 10px;
+  color: #ccc;
+}
+
+.main-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px; /* Horizontal padding within the container */
+}
+
+/* Hero Banner Section Styles */
+.hero-banner-section {
+   background-image: url(/assets/img/Footer\ →\ Section\ \(1\).png);
+   background-position: center;
+   background-size: cover;
+    border-radius: 15px; /* Rounded corners */
+    padding: 40px; /* Internal padding for desktop */
+    margin-bottom: 40px; /* Space below the banner */
+    position: relative; /* For absolute positioning of images and patterns */
+    overflow: hidden; /* Crucial to contain the delivery person image that extends outside */
+    min-height: 350px; /* Ensure a decent height even if content is small */
+    display: flex; /* Use flexbox to align content and image */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Center horizontally, or space-between when content added */
+}
+
+.banner-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between text and image areas */
+    width: 100%; /* Take full width of parent */
+    max-width: 1100px; /* Limit internal content width for better readability */
+    position: relative; /* For z-index if needed */
+    z-index: 2; /* Ensure content is above background patterns */
+}
+
+.banner-text-area {
+    flex: 1; /* Allow text area to grow and shrink */
+    padding-right: 30px; /* Space between text and image on desktop */
+    max-width: 50%; /* Limit width of text area on larger screens */
+}
+
+.banner-headline {
+  font-family: "Quicksand" ;
+    font-size: 2.3em; /* Large headline */
+    font-weight: 700;
+    color: #253D4E; /* Darker text for banner headlines */
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.banner-subheadline {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.banner-subheadline .brand-name {
+    color: #38b000; /* Primary brand green color */
+    font-weight: 600;
+}
+
+/* Subscribe Form Styling (Combined Input & Button) */
+.banner-subscribe-form {
+    display: flex; /* Helps to center the combined input later */
+    align-items: center;
+    max-width: 450px; /* Limits overall form width */
+    width: 100%; /* Ensures it takes available width up to max */
+}
+
+.email-subscribe-combined-input {
+    display: flex;
+    align-items: center;
+    width: 83%;
+    border: 1px solid #eee;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus styles for the combined input when any child (like the email input) is focused */
+.email-subscribe-combined-input:focus-within {
+    border-color: #38b000;
+    box-shadow: 0 0 0 3px rgba(56, 176, 0, 0.2);
+}
+
+.email-input-icon {
+    width: 13px; /* Size of your icon image */
+    height: 13px; /* Size of your icon image */
+    margin-left: 15px; /* Space from the left edge of the input */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    object-fit: contain; /* Ensure image scales correctly within its bounds */
+}
+
+.email-input {
+    flex-grow: 1; /* Allows input to take up most of the available space */
+    padding: 15px 15px 15px 10px; /* Padding around the text input area */
+    border: none; /* No border directly on input */
+    background-color: transparent; /* Transparent background */
+    font-size: 1em;
+    color: #333;
+    outline: none; /* Remove default browser outline on focus */
+    min-width: 0; /* Important for flex items to prevent overflow issues on small screens */
+}
+
+.email-input::placeholder {
+    color: #666;
+}
+
+.subscribe-button-inside {
+    background-color: #5bb27d; /* Subscribe button background color */
+    color: #fff;
+    padding: 15px 30px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Only right corners rounded */
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+    flex-shrink: 0; /* Prevent button from shrinking */
+    height: 100%; /* Make button take full height of the combined input */
+    margin-left: auto; /* Pushes button to the far right within the flex container */
+    display: flex; /* Use flex to vertically center text */
+    align-items: center; /* Vertically center button text */
+    justify-content: center; /* Horizontally center button text */
+}
+
+.subscribe-button-inside:hover {
+    background-color: #4ea16b; /* Darker green on hover */
+}
+
+/* Banner Image Area */
+.banner-image-area {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    position: relative; /* For containing the delivery person image if not absolutely positioned directly in .hero-banner-section */
+    height: 300px; /* Control height of image area on desktop */
+}
+
+.delivery-person-image {
+    max-height: 100%; /* Ensure image fits within its container */
+    width: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position relative to .hero-banner-section or .banner-image-area */
+     right: 30px; /* Adjust to pull image partially out of the box */
+    bottom: 20px; /* Adjust to pull image partially out of the box */
+    z-index: 1; /* Ensure it's above background patterns */
+    max-width: 450px; /* Max width to control its size */
+    object-fit: contain; /* Ensure image scales properly without distortion */
+    animation: float 3s ease-in-out infinite alternate; /* Simple floating animation */
+}
+
+/* Floating animation for background elements / images */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+}
+
+/* General Footer Styling */
+.site-footer {
+    
+    padding: 60px 0 30px; /* Top/bottom padding, no horizontal padding as main-container handles it */
+    color: #555;
+    font-size: 0.9em;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #38b000; /* Green hover color for links */
+}
+
+/* Footer Top Section - Columns Layout */
+.footer-top-section {
+    display: flex;
+    font-size: 10px;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+
+    margin-bottom: 0px;
+}
+
+.footer-column {
+    flex: 1; /* Each column takes equal space initially */
+    min-width: 160px; /* Minimum width before wrapping */
+    margin-right: 2px; /* Space between columns */
+    margin-bottom: 30px; /* Space below columns when they wrap */
+}
+
+.footer-column:last-child {
+    margin-right: 0; /* No right margin on the last column */
+}
+
+/* Company Info Column */
+.company-info {
+    flex: 1.5; /* Give company info column more space */
+    min-width: 220px; /* Adjust min-width for the larger column */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Adjust logo size */
+    margin-bottom: 15px;
+}
+
+.footer-tagline {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start; /* Align icon to top of text */
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.contact-list li:last-child {
+    margin-bottom: 0;
+}
+
+.contact-list .icon-green {
+    color: #38b000; /* Green icon color */
+    font-size: 1.1em;
+    margin-right: 10px;
+    width: 20px; /* Fixed width for icons for alignment */
+    text-align: center;
+}
+
+.contact-list .contact-text {
+    color: #555;
+}
+
+.contact-list .contact-detail {
+    color: #777; /* Slightly lighter color for details */
+}
+
+/* Column Titles */
+.column-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #253D4E; /* Darker heading color */
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Footer Links (UL/LI) */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-links a {
+    color: #555;
+}
+
+/* Install App Column */
+.install-app-column .app-buttons {
+    display: flex;
+    flex-direction: row; /* Stack app buttons vertically */
+    gap: 5px; /* Space between buttons */
+    margin-bottom: 20px;
+}
+
+.app-button img {
+    max-width: 80px; /* Control app button image size */
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.payment-text {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Footer Divider */
+.footer-divider {
+    border-top: 1px solid #BCE3C9; /* Thin light grey line */
+    margin-bottom: 30px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows sections to wrap */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px; /* Space when wrapped */
+}
+.footer-copyright-contact span{
+  color: #00ad4d;
+}
+
+.copyright {
+    line-height: 1.5;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.footer-contact-numbers {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 41px;
+}
+
+.footer-contact-numbers .contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+.footer-contact-numbers .icon-green-circle {
+    /* Light green circle background */
+    color: black; /* Green icon color */
+    border-radius: 50%;
+    width: 35px; /* Size of the circle */
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.footer-contact-numbers .contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact-numbers .number {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #38b000; /* Green number color */
+    white-space: nowrap; /* Prevent numbers from wrapping */
+}
+
+.footer-contact-numbers .description {
+    font-size: 0.9em;
+    color: #777;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.footer-social-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align to the right */
+    gap: 0px;
+    margin-bottom: 10px; /* Space when wrapped */
+    text-align: right;
+}
+
+.follow-us {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+   
+}
+
+.follow-us span {
+    font-weight: 600;
+    color: #253D4E;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    background-color:#3BB77E; /* Light grey circle background */
+    color:white !important;
+    border-radius: 50%;
+    width: 25px; /* Size of the social icon circle */
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #38b000; /* Green on hover */
+    color: #fff;
+}
+
+.discount-text {
+    color: #777;
+    font-size: 0.85em;
+    margin-top: 5px; /* Space below social icons */
+}
+
+/* Payment gateway images if applicable
+.payment-gateways-img, .payment-methods-img {
+    max-width: 200px;
+    height: auto;
+    margin-top: 10px;
+}
+*/
+
+
+
+
+
+@media (min-width: 1200px) {
+  .custom-col-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+@media(max-width:1200px){
+  .timersiz{
+    top: 10%;
+  }
+    .side-space{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+   .m-nav {
+    justify-content: center !important;
+    gap: 1rem;
+  }
+
+}
+/* Align support center text right on large screens */
+@media (min-width: 992px) {
+
+  
+  .bottom-navbar .text-success {
+    margin-left: auto;
+  }
+   
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+
+
+.timersiz{
+  left:10% ;
+}
+  .bottom-navbar .navbar-collapse {
+    margin-top: 1rem;
+  }
+  .four-column-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 24px;
+  }
+
+  .showcase-product-card {
+    flex-direction: row; /* Keep image on left, text on right */
+    align-items: center;
+  }
+
+  .showcase-product-image-area {
+    width: 40%;
+  }
+
+  .showcase-product-image-area img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .showcase-product-details {
+    width: 60%;
+    padding: 12px;
+  }
+    .banner-headline {
+        font-size: 2em;
+    }
+    .banner-text-area {
+        max-width: 60%;
+        padding-right: 20px;
+    }
+    .delivery-person-image {
+        right: -30px;
+        max-width: 380px;
+        bottom: 30px;
+    }
+    .hero-banner-section {
+        padding: 30px;
+    }
+     .site-footer {
+        padding: 50px 0 25px;
+    }
+    .footer-column {
+        flex: 1 1 calc(33% - 20px); /* 3 columns per row */
+        min-width: unset; /* Reset min-width to allow more flexible wrapping */
+        margin-right: 15px;
+    }
+    .company-info {
+        flex: 1 1 100%; /* Company info takes full width at this breakpoint */
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .footer-logo img {
+        margin: 0 auto 15px auto; /* Center logo */
+    }
+    .contact-list {
+        text-align: left; /* Keep contact list left aligned even if parent is centered */
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .contact-list li {
+        justify-content: center; /* Center icons and text within their own li */
+    }
+    .install-app-column {
+        flex: 1 1 calc(50% - 20px); /* 2 columns per row for app section */
+        text-align: center;
+    }
+    .app-buttons {
+        align-items: center; /* Center app buttons */
+    }
+    .footer-bottom-section {
+        flex-direction: column; /* Stack bottom sections */
+        text-align: center;
+        gap: 30px;
+    }
+    .footer-copyright-contact,
+    .footer-social-payment {
+        align-items: center; /* Center content when stacked */
+        margin-bottom: 0;
+    }
+    .footer-contact-numbers {
+        flex-direction: column; /* Stack phone numbers vertically */
+        gap: 15px;
+        align-items: flex-start; /* Align numbers left within their column */
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .follow-us {
+        flex-direction: column; /* Stack "Follow Us" text and icons */
+        gap: 10px;
+        margin-bottom: 0;
+    }
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+}
+
+
+/* Responsive Adjustments (ensure these are also updated if needed) */
+@media (max-width: 768px) {
+   
+
+   .hero-banner-section {
+        padding: 30px;
+        min-height: auto;
+        height: auto;
+    }
+     .product-nav-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .product-nav-pills {
+    width: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+    .banner-content-wrapper {
+        flex-direction: column; /* Stack content vertically */
+        text-align: start;
+        gap: 20px;
+    }
+    .banner-text-area {
+        padding-right: 0;
+        margin-bottom: 0;
+        max-width: 100%;
+    }
+    .banner-headline {
+        font-size: 1.8em;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+    .banner-subheadline {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .banner-subscribe-form {
+        width: 100%;
+        max-width: 350px;
+        
+    }
+
+    .email-subscribe-combined-input {
+        flex-direction: column;
+        border-radius: 8px;
+        height: auto;
+    }
+
+    .email-input-icon {
+        display: none; /* Hide icon on smaller screens */
+    }
+
+    .email-input {
+        padding: 12px 15px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .subscribe-button-inside {
+        width: 100%;
+        border-radius: 0 0 8px 8px;
+        padding: 12px 20px;
+        font-size: 1em;
+        margin-left: 0;
+    }
+
+    .banner-image-area {
+        height: 220px;
+        justify-content: center;
+        margin-top: 20px;
+        position: relative; /* Keep relative for containing image */
+        overflow: hidden;
+    }
+    .delivery-person-image {
+        position: static; /* Remove absolute positioning on smaller screens */
+        max-width: 80%;
+        height: auto;
+        transform: none;
+        bottom: auto;
+        right: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .banner-bg-pattern {
+        display: none; /* Hide background patterns on smaller screens */
+    }
+
+     .site-footer {
+        padding: 40px 0 20px;
+    }
+    .footer-column {
+        flex: 1 1 calc(50% - 20px); /* 2 columns per row */
+        text-align: center; /* Center column content */
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+    .footer-column:nth-child(2n) {
+        margin-right: 0; /* Remove right margin on every second column */
+    }
+    .footer-column:nth-child(2n+1) {
+        margin-right: 20px; /* Add right margin on every odd column */
+    }
+    /* Company info already handles its 100% width and centering from 992px breakpoint */
+    .contact-list li {
+        justify-content: center; /* Ensure contact items are centered */
+    }
+    .column-title {
+        text-align: center; /* Center column titles */
+    }
+    .footer-links {
+        max-width: fit-content; /* Allow ul to shrink to content width */
+        margin: 0 auto; /* Center links list */
+    }
+    .install-app-column {
+        flex: 1 1 100%; /* Install app column takes full width */
+        margin-right: 0;
+    }
+    .app-buttons {
+        justify-content: center; /* Center app buttons */
+        flex-direction: row; /* Layout app buttons horizontally on smaller screens */
+        flex-wrap: wrap; /* Allow wrapping if space is too tight */
+        gap: 10px;
+    }
+    .app-button img {
+        max-width: 120px; /* Shrink app button images */
+    }
+    .payment-text {
+        text-align: center;
+    }
+}
+
+@media (max-width:576px){
+  .hero-banner{
+    padding: 20px 30px;
+  }
+  
+  .hero-banner h2{
+    font-size: 2rem;
+  }
+  
+}
+@media (max-width: 480px) {
+  .timersiz{
+    font-size: 10px;
+    left:  18%;
+  }
+  .search-bar-wrapper{
+    min-width: 284px;
+  }
+  .four-column-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack all columns */
+    gap: 20px;
+  }
+
+  .showcase-product-card {
+    flex-direction: column; /* Image on top, info below */
+    align-items: flex-start;
+  }
+
+  .showcase-product-image-area {
+    width: 100%;
+    height: auto;
+  }
+
+  .showcase-product-image-area img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .showcase-product-details {
+    padding: 12px;
+    width: 100%;
+  }
+   .hero-banner-section {
+        padding: 20px;
+    }
+    .banner-headline {
+        font-size: 1.5em;
+    }
+    .banner-subheadline {
+        font-size: 0.9em;
+    }
+    .email-input {
+        padding: 10px 15px;
+    }
+    .subscribe-button-inside {
+        padding: 10px 15px;
+    }
+    .banner-image-area {
+        height: 180px;
+    }
+    .delivery-person-image {
+        max-width: 90%;
+    }
+     .site-footer {
+        padding: 30px 0 15px;
+    }
+    .footer-top-section {
+        margin-bottom: 20px;
+    }
+    .footer-column {
+        flex: 1 1 100%; /* Single column layout */
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    .footer-column:last-child {
+        margin-bottom: 0;
+    }
+    .company-info {
+        margin-bottom: 30px;
+    }
+    .column-title {
+        margin-bottom: 15px;
+    }
+    .contact-list li {
+        margin-bottom: 10px;
+    }
+    .footer-contact-numbers {
+        gap: 10px;
+    }
+    .footer-contact-numbers .contact-item {
+        flex-direction: row; /* Keep horizontal if space allows */
+        justify-content: center; /* Center each number block */
+    }
+    .footer-contact-numbers .number {
+        font-size: 1.1em;
+    }
+    .footer-contact-numbers .description {
+        font-size: 0.75em;
+    }
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9em;
+    }
+    .follow-us {
+        text-align: center;
+    }
+    .discount-text {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:320px){
+  
+.section-title-bar{
+  justify-content: center;
+}
+}
