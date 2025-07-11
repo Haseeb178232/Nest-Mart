@@ -12,14 +12,17 @@
   /* btn variables End */
 
   /* main heading variables start  */
-
-
+   --head-color:#253D4E;
+   --head-family:"QuickSand";
+   --head-weight:700;
   /* main heading variables End  */
 
-
+   /* paragraph variable start */
+   --para-color:#7E7E7E;
+   /* paragraph variable end */
 }
 
-
+/* example variable use */
 .website-btn{
   color: var(--btn-color);
   background-color: var(--btn-bg-color);
@@ -40,12 +43,12 @@
    transition: 0.4s ease-in-out;
 
 }
-
+/* example variable end */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    
     list-style: none;
 }
 .side-space{
@@ -196,7 +199,7 @@
 }
 
 .nav-active{
-  color: green;
+  color: #3BB77E;
 }
 
 
@@ -1039,6 +1042,7 @@ padding: 2px 10px;
     align-items: center;
     justify-content: center;
     font-size: 0.8em;
+    text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -1053,18 +1057,233 @@ padding: 2px 10px;
     margin-top: 5px; /* Space below social icons */
 }
 
-/* Payment gateway images if applicable
-.payment-gateways-img, .payment-methods-img {
-    max-width: 200px;
-    height: auto;
-    margin-top: 10px;
+/* About Page */
+.pgtrack{
+  font-size: 12px;
+  padding-inline-start: 94px;
+  position: relative;
 }
-*/
+.pgtrack a{
+ color: #7E7E7E;
+ text-decoration: none;
+}
+.AbActive a{
+  color: #3BB77E;
+}
+.AbActive img{ 
+  position: absolute;
+  left: 75px;
+}
+.mainimg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
+.hero-section1 h2 {
+  font-family: "Quicksand", sans-serif;
+  color: #253D4E;
+  font-weight: 700;
+  padding-bottom: 20px;
+  font-size: 28px;
+}
 
+.hero-section1 p {
+  font-size: 14px;
+  color: #7E7E7E;
+}
 
+.scroll-strip {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.scroll-strip::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 
+.mini-img {
+  flex: 0 0 auto;
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
 
+  .section-title {
+    font-family: var(--head-family);
+    color:var(--head-color);
+      font-weight: var(--head-weight);
+      text-align: center;
+      margin-bottom: 40px;
+      text-decoration: #BCE3C9 5px wavy underline ;
+      
+    }
+    .service-card {
+      background-color: #fff;
+      border: 1px solid #f0f0f0;
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .service-card img {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h5 {
+      color: var(--head-color);
+      font-family: var(--head-family);
+      font-weight: var(--head-weight);
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      color:var(--para-color);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .service-card a {
+      color: #2ecc71;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .service-card a:hover {
+      text-decoration: underline;
+    }
+
+.partnerimg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.performance-section {
+  padding-inline: 15px;
+}
+
+.performance-section small {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.performance-section h2 {
+  font-family: var(--head-family);
+  color:var(--head-color);
+  font-weight: var(--head-weight);
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.performance-section p {
+  font-size: 14px;
+  color: var(--para-color);
+}
+
+.performance-section1 h3 {
+  font-size: 20px;
+  font-family: var(--head-family);
+  color:var(--head-color);
+  font-weight: var(--head-weight);
+}
+
+.performance-section1 p {
+  font-size: 13px;
+  color: var(--para-color);
+}
+.secondpadding{
+  padding-inline: 72px;
+}
+.service-image {
+  position: relative;
+  background-image: url('/assets/img1/Main.png');
+  background-size: cover;
+  background-position: center;
+  padding-block: 70px;
+  border-radius: 20px;
+  overflow: hidden; /* ensures overlay stays within border-radius */
+  z-index: 1;
+  flex-wrap: wrap;
+ 
+}
+
+.service-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #4B675A; /* Dark overlay, adjust as needed */
+  opacity: 70%;
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.service-image > * {
+  position: relative;
+  z-index: 1; /* makes sure content is above the overlay */
+}
+   .text-light span{
+    padding-left: 30px;
+    font-size: 40px;
+    font-weight: 700;
+   }
+   .team-section{
+    padding-inline: 90px;
+   }
+   .team-section h3{
+          font-family: var(--head-family);
+  color:var(--head-color);
+  font-weight: var(--head-weight);
+          text-decoration: #BCE3C9 4px wavy underline;
+   }
+  .ourteam .memberbtn :hover{
+    background-color:transparent;
+      border: 2px solid green;
+      color: green;
+   }
+   .ourteam h2{ 
+        font-family: var(--head-family);
+  color:var(--head-color);
+  font-weight: var(--head-weight);
+   }
+   .ourteam p{
+    color: var(--para-color);
+   }
+   .teamcard{
+    background-color:white;
+    position: absolute;
+    top: 62%;
+    left: 12%;
+    padding-inline: 60px;
+    padding-block: 20px;
+    border: none;
+   }
+   .teamcard h4{
+     font-family: var(--head-family);
+  color:var(--head-color);
+  font-weight: var(--head-weight);
+   }
+   .column-title1 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #253D4E; /* Darker heading color */
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.firstpadding{
+padding-inline: 140px;
+}
 @media (min-width: 1200px) {
   .custom-col-5 {
     flex: 0 0 20%;
@@ -1207,6 +1426,25 @@ padding: 2px 10px;
     .social-icons {
         justify-content: center; /* Center social icons */
     }
+    /* About */
+    .firstpadding{
+      padding-inline:20px;
+    }
+    .secondpadding{
+      padding-inline: 20px;
+    }
+    .team-section{
+      padding-inline: 20px;
+    }
+    .hero-section1 h2{
+      display: flex;
+      justify-content: center;
+    }
+   
+    .scroll-strip{
+      display: flex;
+      justify-content: center;
+    }
 }
 
 
@@ -1345,6 +1583,12 @@ padding: 2px 10px;
     .payment-text {
         text-align: center;
     }
+    .teamcard{
+      left: 8%;
+    }
+    .wholecard{
+      left: 20%;
+    }
 }
 
 @media (max-width:576px){
@@ -1459,6 +1703,15 @@ padding: 2px 10px;
     .discount-text {
         font-size: 0.8em;
     }
+    .pgtrack{
+      padding-inline-start: 65px;
+    }
+    .AbActive img{
+      left: 40px;
+    }
+     .wholecard{
+      left: 0%;
+    }
 }
 
 @media (max-width:320px){
@@ -1469,4 +1722,7 @@ padding: 2px 10px;
 .m-nav{
   padding: 0px;
 }
+    .teamcard {
+        left: 13%;
+    }
 }
