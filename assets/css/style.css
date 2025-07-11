@@ -20,6 +20,12 @@
    /* paragraph variable start */
    --para-color:#7E7E7E;
    /* paragraph variable end */
+
+   /* Contact us page btn */
+   --contact-btn-bg-color:#3BB77E;
+   --contact-btn-family:"QuickSand";
+   --contact-btn-color:white;
+   /* end */
 }
 
 /* example variable use */
@@ -1284,6 +1290,93 @@ padding: 2px 10px;
 .firstpadding{
 padding-inline: 140px;
 }
+/* About Styling end here */
+
+/* Contact Styling  Start*/
+  .firsth span{
+   color: #00ad4d;
+   font-family: var(--head-family);
+   font-size: 19px;
+   font-weight: var(--head-weight);
+}
+.firsth h2{
+  font-size: 36px;
+  font-family: var(--head-family);
+  color: var(--head-color);
+  font-weight: var(--head-weight);
+  padding-block: 15px;
+}
+.firsth p{
+  color: var(--para-color);
+  font-size: 14px;
+}
+.secondh{
+  padding-top: 65px;
+}
+.secondh h5{
+  font-family: var(--head-family);
+  color: var(--head-color);
+  font-weight: var(--head-weight);
+}
+.secondh p{
+   color: var(--para-color);
+  font-size: 14px;
+}
+ #map {
+    width: 100%;
+    min-height: 300px;
+  }
+  .contactbtn{
+    font-family: var(--contact-btn-family);
+    color: var(--contact-btn-color);
+    background-color: var(--contact-btn-bg-color);
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  .contactbtn:hover{
+   background-color: green;
+   border:2px solid  var(--contact-btn-bg-color);
+   transition: 0.4s ease-in-out;
+
+}
+.location span{
+  color: #00ad4d;
+  font-size: 20px;
+  font-family: "QuickSand";
+  font-weight: 700;
+  
+}
+.location .Address{
+  margin-top: 15px;
+}
+.location .Address,.Phone,.Email{
+  color: var(--para-color);
+  font-size: 13px;
+}
+.formthings span{
+      color: #00ad4d;
+      font-weight: 700;
+      font-family: "QuickSand";
+}
+.formthings h2 {
+  font-family: var(--head-family);
+  font-weight: var(--head-weight);
+  color: var(--head-color);
+}
+.formthings p{
+  color: var(--para-color);
+  font-size: 12px;
+}
+.formbtn{
+  background-color:#253D4E;
+  padding-inline: 25px;
+  padding-block: 12px;
+  font-size: 12px;
+}
 @media (min-width: 1200px) {
   .custom-col-5 {
     flex: 0 0 20%;
@@ -1445,8 +1538,17 @@ padding-inline: 140px;
       display: flex;
       justify-content: center;
     }
+    .formthings2{
+      margin-top: 25px;
+    }
 }
+ 
 
+  @media (min-width: 769px) {
+    #map {
+      height: 500px;
+    }
+  }
 
 /* Responsive Adjustments (ensure these are also updated if needed) */
 @media (max-width: 768px) {
@@ -1588,6 +1690,41 @@ padding-inline: 140px;
     }
     .wholecard{
       left: 20%;
+    }
+     #map {
+      height: 300px;
+    }
+    .location{
+      align-items: center;
+    display: flex
+;
+    flex-direction: column;
+    }
+    .firsth{
+      align-items: center;
+    display: flex
+;
+    flex-direction: column;
+    }
+    .secondh{
+      align-items: center;
+    display: flex
+;
+    flex-direction: column;
+    }
+    .formthings{
+      align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+    .formthings2{
+      margin-top: 25px;
+      align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+    .greybtn{
+      justify-content: center;
     }
 }
 

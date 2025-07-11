@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="assets/img/Clip path group.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="middle-navbar py-3 border-bottom bg-white">
+        <div class="container m-nav d-flex align-items-center justify-content-between flex-wrap gap-3">
+
+            <!-- Logo -->
+            <a href="#" class="d-flex align-items-center text-decoration-none">
+                <img src="assets/img/logo.svg fill.png" alt="Logo" style="height: 40px;">
+
+            </a>
+
+            <!-- Search + Categories -->
+            <div class="d-flex  mx-3  search-bar-wrapper">
+                <div class="dropdown all-categories-dropdown">
+                    <button class="btn d-flex align-items-center px-3 h-100" data-bs-toggle="dropdown" type="button">
+                        All Categories
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                            viewBox="0 0 16 16" class="ms-1">
+                            <path fill-rule="evenodd"
+                                d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Fruits</a></li>
+                        <li><a class="dropdown-item" href="#">Vegetables</a></li>
+                    </ul>
+                </div>
+
+                <!-- Vertical Line -->
+                <div class="search-divider"></div>
+
+                <input type="text" class="form-control border-0 search-input" placeholder="Search for items...">
+
+                <button class="btn search-button px-4" type="button">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+
+            <!-- Location -->
+            <div class="dropdown location-dropdown">
+                <button class="btn d-flex align-items-center px-3" data-bs-toggle="dropdown">
+                    <i class="bi bi-geo-alt me-1 "></i> <span> Your Location</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                        viewBox="0 0 16 16" class="ms-1">
+                        <path fill-rule="evenodd"
+                            d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">New York</a></li>
+                    <li><a class="dropdown-item" href="#">Los Angeles</a></li>
+                </ul>
+            </div>
+            <!-- Icons (Compare, Wishlist, Cart, Account) -->
+            <div class="d-flex align-items-center gap-3 text-center icons">
+                <div class="position-relative">
+                    <a href="#">
+                        <i class="bi bi-arrow-repeat fs-5 "></i>&nbsp;<small class="nav-end-item">Compare</small>
+                        <span class="position-absolute top-0  translate-middle badge bg-success rounded-pill">3</span>
+                    </a>
+                </div>
+                <div class="position-relative">
+                    <a href="#"> <i class="bi bi-heart fs-5"></i>&nbsp;<small class="nav-end-item">Wishlist</small>
+                        <span class="position-absolute top-0  translate-middle badge bg-success rounded-pill">6</span>
+                    </a>
+
+                </div>
+                <div class="position-relative">
+                    <a href="#"> <i class="bi bi-cart fs-5"></i>&nbsp;<small class="nav-end-item">Cart</small>
+                        <span class="position-absolute top-0  translate-middle badge bg-success rounded-pill">2</span>
+                    </a>
+
+                </div>
+                <div>
+                    <a href="#"> <i class="bi bi-person fs-5"></i>&nbsp;<small class="nav-end-item">Account</small></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVBAR -->
+    <nav class="bottom-navbar navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <!-- Browse Categories Button -->
+            <button class="btn btn-success me-3">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-grid-fill me-2"></i> Browse All Categories <svg
+                            xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Home 1</a></li>
+                        <li><a class="dropdown-item" href="#">Home 2</a></li>
+                    </ul>
+                </li>
+            </button>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Links -->
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 bottom-navbar-check">
+
+                    <li class="nav-item"><a class="nav-link" href="#"><img src="assets/img/icon-hot.svg fill.png"
+                                alt=""> Deals
+                        </a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Home
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html" target="_blank">Home 1</a></li>
+                            <li><a class="dropdown-item" href="#">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-active" href="#" data-bs-toggle="dropdown">About
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                            <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Vendors
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                            <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Mega menu
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                            <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                            <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                            <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Contact
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                            <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- Support Info -->
+                <div class="d-flex align-items-center ">
+                    <i class="bi bi-headset me-2 fs-5"></i>
+                    <div>
+                        <strong class="text-success">1900 - 888</strong><br>
+                        <small class="text-muted">24/7 Support Center</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="py-3">
+        <ul class="d-flex align-items-center flex-wrap gap-3 pgtrack">
+            <li class="AbActive">
+                <a href=""><img src="assets/img1/Vector.png" alt=""> Home</a>
+            </li>
+            <svg width="10" height="25" viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6511_2195)">
+                    <path
+                        d="M1.13891 14.77L0.628906 14.23L2.60891 12.25L0.628906 10.27L1.13891 9.73002L3.11891 11.71C3.27891 11.87 3.35891 12.05 3.35891 12.25C3.35891 12.45 3.27891 12.63 3.11891 12.79L1.13891 14.77Z"
+                        fill="#7E7E7E" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_6511_2195">
+                        <rect width="9" height="24" fill="white" transform="matrix(1 0 0 -1 0.628906 24.25)" />
+                    </clipPath>
+                </defs>
+            </svg>
+
+            <li><a href="">Pages</a></li>
+            <svg width="10" height="25" viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6511_2195)">
+                    <path
+                        d="M1.13891 14.77L0.628906 14.23L2.60891 12.25L0.628906 10.27L1.13891 9.73002L3.11891 11.71C3.27891 11.87 3.35891 12.05 3.35891 12.25C3.35891 12.45 3.27891 12.63 3.11891 12.79L1.13891 14.77Z"
+                        fill="#7E7E7E" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_6511_2195">
+                        <rect width="9" height="24" fill="white" transform="matrix(1 0 0 -1 0.628906 24.25)" />
+                    </clipPath>
+                </defs>
+            </svg>
+
+            <li><a href="">Contact</a></li>
+        </ul>
+        <hr>
+    </div>
+    <div class="container py-3">
+        <div class="row ">
+            <div class="col-lg-4 col-md-6 firsth">
+                <span>How can help you?</span>
+                <h2>Let us know how <br>
+                    we can help you</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                    leo.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                    leo.</p>
+            </div>
+            <div class="col-lg-4 col-md-6  secondh">
+                <h5>01.&nbsp;Visit Feedback</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                    leo.</p>
+                <br>
+                <h5 class="active">03.&nbsp;Billing inquiries</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                    leo.</p>
+            </div>
+            <div class="col-lg-4 col-md-6  secondh">
+                <h5>02.&nbsp;Employer Services</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                    leo.</p>
+                <br>
+                <h5>04.&nbsp;General inquiries</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                    leo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-12">
+                <div id="map" style="height: 300px;" class="rounded-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 location py-3">
+                <span>Office</span>
+                
+                <div class="Address">205 North Michigan Avenue, Suite 810 <br>Chicago, 60601, USA</div>
+                <div class="Phone">Phone: (123) 456-7890</div>
+                <div class="Email">Email: contact@Evara.com</div>
+                <button class="contactbtn"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_6511_9223)">
+                            <path
+                                d="M5.21187 12.03L4.85187 11.75C3.97187 11.0034 3.13188 10.1634 2.33187 9.23003C0.891875 7.55003 0.171875 6.15003 0.171875 5.03003C0.171875 4.12336 0.398542 3.28336 0.851875 2.51003C1.30521 1.7367 1.91854 1.12336 2.69187 0.67003C3.46521 0.216696 4.30521 -0.00997066 5.21187 -0.00997066C6.11854 -0.00997066 6.95854 0.216696 7.73187 0.67003C8.50521 1.12336 9.11854 1.7367 9.57187 2.51003C10.0252 3.28336 10.2519 4.12336 10.2519 5.03003C10.2519 6.15003 9.53187 7.55003 8.09187 9.23003C7.31854 10.1367 6.47854 10.9767 5.57188 11.75L5.21187 12.03ZM5.21187 1.07003C4.49187 1.07003 3.83187 1.25003 3.23187 1.61003C2.63188 1.97003 2.15187 2.45003 1.79188 3.05003C1.43187 3.65003 1.25187 4.3167 1.25187 5.05003C1.25187 5.78336 1.74521 6.76336 2.73187 7.99003C3.42521 8.87003 4.25187 9.7367 5.21187 10.59C6.17188 9.7367 6.99854 8.87003 7.69187 7.99003C8.67854 6.76336 9.17188 5.78336 9.17188 5.05003C9.17188 4.3167 8.99187 3.65003 8.63188 3.05003C8.27187 2.45003 7.79187 1.97003 7.19187 1.61003C6.59188 1.25003 5.93187 1.07003 5.21187 1.07003ZM5.21187 7.03003C4.65188 7.03003 4.17854 6.8367 3.79187 6.45003C3.40521 6.06336 3.21187 5.59003 3.21187 5.03003C3.21187 4.47003 3.40521 3.9967 3.79187 3.61003C4.17854 3.22336 4.65188 3.03003 5.21187 3.03003C5.77187 3.03003 6.24521 3.22336 6.63188 3.61003C7.01854 3.9967 7.21187 4.47003 7.21187 5.03003C7.21187 5.59003 7.01854 6.06336 6.63188 6.45003C6.24521 6.8367 5.77187 7.03003 5.21187 7.03003ZM5.21187 4.03003C4.94521 4.03003 4.71187 4.13003 4.51187 4.33003C4.31187 4.53003 4.21187 4.76336 4.21187 5.03003C4.21187 5.2967 4.31187 5.53003 4.51187 5.73003C4.71187 5.93003 4.94521 6.03003 5.21187 6.03003C5.47854 6.03003 5.71187 5.93003 5.91187 5.73003C6.11188 5.53003 6.21187 5.2967 6.21187 5.03003C6.21187 4.76336 6.11188 4.53003 5.91187 4.33003C5.71187 4.13003 5.47854 4.03003 5.21187 4.03003Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_6511_9223">
+                                <rect width="12.5" height="12" fill="white"
+                                    transform="matrix(1 0 0 -1 0.171875 12.03)" />
+                            </clipPath>
+                        </defs>
+                    </svg>view map
+                </button>
+            </div>
+            <div class="col-lg-4 location py-3">
+                <span >Studio</span>
+                
+                <div class="Address">205 North Michigan Avenue, Suite 810 <br>Chicago, 60601, USA</div>
+                <div class="Phone">Phone: (123) 456-7890</div>
+                <div class="Email">Email: contact@Evara.com</div>
+                <button class="contactbtn"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_6511_9223)">
+                            <path
+                                d="M5.21187 12.03L4.85187 11.75C3.97187 11.0034 3.13188 10.1634 2.33187 9.23003C0.891875 7.55003 0.171875 6.15003 0.171875 5.03003C0.171875 4.12336 0.398542 3.28336 0.851875 2.51003C1.30521 1.7367 1.91854 1.12336 2.69187 0.67003C3.46521 0.216696 4.30521 -0.00997066 5.21187 -0.00997066C6.11854 -0.00997066 6.95854 0.216696 7.73187 0.67003C8.50521 1.12336 9.11854 1.7367 9.57187 2.51003C10.0252 3.28336 10.2519 4.12336 10.2519 5.03003C10.2519 6.15003 9.53187 7.55003 8.09187 9.23003C7.31854 10.1367 6.47854 10.9767 5.57188 11.75L5.21187 12.03ZM5.21187 1.07003C4.49187 1.07003 3.83187 1.25003 3.23187 1.61003C2.63188 1.97003 2.15187 2.45003 1.79188 3.05003C1.43187 3.65003 1.25187 4.3167 1.25187 5.05003C1.25187 5.78336 1.74521 6.76336 2.73187 7.99003C3.42521 8.87003 4.25187 9.7367 5.21187 10.59C6.17188 9.7367 6.99854 8.87003 7.69187 7.99003C8.67854 6.76336 9.17188 5.78336 9.17188 5.05003C9.17188 4.3167 8.99187 3.65003 8.63188 3.05003C8.27187 2.45003 7.79187 1.97003 7.19187 1.61003C6.59188 1.25003 5.93187 1.07003 5.21187 1.07003ZM5.21187 7.03003C4.65188 7.03003 4.17854 6.8367 3.79187 6.45003C3.40521 6.06336 3.21187 5.59003 3.21187 5.03003C3.21187 4.47003 3.40521 3.9967 3.79187 3.61003C4.17854 3.22336 4.65188 3.03003 5.21187 3.03003C5.77187 3.03003 6.24521 3.22336 6.63188 3.61003C7.01854 3.9967 7.21187 4.47003 7.21187 5.03003C7.21187 5.59003 7.01854 6.06336 6.63188 6.45003C6.24521 6.8367 5.77187 7.03003 5.21187 7.03003ZM5.21187 4.03003C4.94521 4.03003 4.71187 4.13003 4.51187 4.33003C4.31187 4.53003 4.21187 4.76336 4.21187 5.03003C4.21187 5.2967 4.31187 5.53003 4.51187 5.73003C4.71187 5.93003 4.94521 6.03003 5.21187 6.03003C5.47854 6.03003 5.71187 5.93003 5.91187 5.73003C6.11188 5.53003 6.21187 5.2967 6.21187 5.03003C6.21187 4.76336 6.11188 4.53003 5.91187 4.33003C5.71187 4.13003 5.47854 4.03003 5.21187 4.03003Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_6511_9223">
+                                <rect width="12.5" height="12" fill="white"
+                                    transform="matrix(1 0 0 -1 0.171875 12.03)" />
+                            </clipPath>
+                        </defs>
+                    </svg>view map
+                </button>
+            </div>
+            <div class="col-lg-4 location py-3">
+                <span>Shop</span>
+                
+                <div class="Address">205 North Michigan Avenue, Suite 810 <br>Chicago, 60601, USA</div>
+                <div class="Phone">Phone: (123) 456-7890</div>
+                <div class="Email">Email: contact@Evara.com</div>
+                <button class="contactbtn"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_6511_9223)">
+                            <path
+                                d="M5.21187 12.03L4.85187 11.75C3.97187 11.0034 3.13188 10.1634 2.33187 9.23003C0.891875 7.55003 0.171875 6.15003 0.171875 5.03003C0.171875 4.12336 0.398542 3.28336 0.851875 2.51003C1.30521 1.7367 1.91854 1.12336 2.69187 0.67003C3.46521 0.216696 4.30521 -0.00997066 5.21187 -0.00997066C6.11854 -0.00997066 6.95854 0.216696 7.73187 0.67003C8.50521 1.12336 9.11854 1.7367 9.57187 2.51003C10.0252 3.28336 10.2519 4.12336 10.2519 5.03003C10.2519 6.15003 9.53187 7.55003 8.09187 9.23003C7.31854 10.1367 6.47854 10.9767 5.57188 11.75L5.21187 12.03ZM5.21187 1.07003C4.49187 1.07003 3.83187 1.25003 3.23187 1.61003C2.63188 1.97003 2.15187 2.45003 1.79188 3.05003C1.43187 3.65003 1.25187 4.3167 1.25187 5.05003C1.25187 5.78336 1.74521 6.76336 2.73187 7.99003C3.42521 8.87003 4.25187 9.7367 5.21187 10.59C6.17188 9.7367 6.99854 8.87003 7.69187 7.99003C8.67854 6.76336 9.17188 5.78336 9.17188 5.05003C9.17188 4.3167 8.99187 3.65003 8.63188 3.05003C8.27187 2.45003 7.79187 1.97003 7.19187 1.61003C6.59188 1.25003 5.93187 1.07003 5.21187 1.07003ZM5.21187 7.03003C4.65188 7.03003 4.17854 6.8367 3.79187 6.45003C3.40521 6.06336 3.21187 5.59003 3.21187 5.03003C3.21187 4.47003 3.40521 3.9967 3.79187 3.61003C4.17854 3.22336 4.65188 3.03003 5.21187 3.03003C5.77187 3.03003 6.24521 3.22336 6.63188 3.61003C7.01854 3.9967 7.21187 4.47003 7.21187 5.03003C7.21187 5.59003 7.01854 6.06336 6.63188 6.45003C6.24521 6.8367 5.77187 7.03003 5.21187 7.03003ZM5.21187 4.03003C4.94521 4.03003 4.71187 4.13003 4.51187 4.33003C4.31187 4.53003 4.21187 4.76336 4.21187 5.03003C4.21187 5.2967 4.31187 5.53003 4.51187 5.73003C4.71187 5.93003 4.94521 6.03003 5.21187 6.03003C5.47854 6.03003 5.71187 5.93003 5.91187 5.73003C6.11188 5.53003 6.21187 5.2967 6.21187 5.03003C6.21187 4.76336 6.11188 4.53003 5.91187 4.33003C5.71187 4.13003 5.47854 4.03003 5.21187 4.03003Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_6511_9223">
+                                <rect width="12.5" height="12" fill="white"
+                                    transform="matrix(1 0 0 -1 0.171875 12.03)" />
+                            </clipPath>
+                        </defs>
+                    </svg>view map
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container py-5">
+             <div class="row">
+                     <div class="col-lg-8">
+                        <span>Contact form</span>
+                        <h2>Drop Us a Line</h2>
+                        <p>Your email address will not be published. Required fields are marked *</p>
+                        <form class="row ">
+                             <div class="col-lg-6">
+                                   <input type="text" placeholder="First Name">
+                             </div>
+                             <div class="col-lg-6">
+                                   <input type="text" placeholder="First Name">
+                             </div>
+                             <div class="row">
+                                  <div class="col-lg-6">
+                                   <input type="text" placeholder="First Name">
+                             </div>
+                             <div class="col-lg-6">
+                                   <input type="text" placeholder="First Name">
+                             </div>
+                             </div>
+                               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </form>
+                        
+                     </div>
+                     <div class="col-lg-4">
+                             <img src="assets/img1/Main → Section → contact-2.png.png" alt="">
+                     </div>
+             </div>
+    </div>
+
+
+
+
+    <script>
+        // Initialize map
+        var map = L.map('map').setView([48.8566, 2.3522], 4); // Centered around Europe
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution:
+                'Leaflet | © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(map);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
